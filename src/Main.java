@@ -4,9 +4,15 @@ import java.awt.event.KeyListener;
 
 public class Main {
     public static void main(String[] args) {
-
-     JFrame frame = new JFrame();
-        frame.setSize(600,600);
+        JFrame frame = new JFrame();
+        String[] items = {"800x600","1024x768","1200x600"};
+        Object result =  JOptionPane.showInputDialog(frame,
+                "Выберите подходящий размер:",
+                "Выбор разрешения",
+                JOptionPane.QUESTION_MESSAGE,null,items,items[0]);
+  String str = String.valueOf(result);
+  String[] res = str.split("x");
+        frame.setSize(Integer.parseInt(res[0]),Integer.parseInt(res[0]));
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setVisible(true);
         frame.setFocusable(true);
