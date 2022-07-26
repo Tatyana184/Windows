@@ -19,7 +19,10 @@ public class Main {
             @Override
             public void keyPressed(KeyEvent e) {
                 if(e.getKeyCode() == KeyEvent.VK_SPACE ){
-                    JOptionPane.showMessageDialog(frame,"Tatyana");
+                    String result = JOptionPane.showInputDialog(
+                            "<html><h2>¬ведите ваше им€","");
+
+                    JOptionPane.showMessageDialog(frame,result);
                 }
             }
 
