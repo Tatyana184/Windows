@@ -19,12 +19,18 @@ public class Main {
             @Override
             public void keyPressed(KeyEvent e) {
                 if(e.getKeyCode() == KeyEvent.VK_SPACE ){
-                    String result = JOptionPane.showInputDialog(
-                            "<html><h2>Введите ваше имя","");
-
-                    JOptionPane.showMessageDialog(frame,result);
+                    int result =   JOptionPane.showConfirmDialog(frame,
+                            "Вам нравится значок?", "",
+                            JOptionPane.YES_NO_CANCEL_OPTION);
+                    if (result == JOptionPane.YES_OPTION)
+                        JOptionPane.showMessageDialog(frame,
+                                "Отлично");
+                    else if (result == JOptionPane.NO_OPTION)
+                        JOptionPane.showMessageDialog(frame,
+                                "Очень жаль");
                 }
-            }
+
+                }
 
             @Override
             public void keyReleased(KeyEvent e) {
